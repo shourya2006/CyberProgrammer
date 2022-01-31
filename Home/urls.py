@@ -19,7 +19,7 @@ urlpatterns = [
     path("reset/<uidb64>/<token>/",auth_views.PasswordResetConfirmView.as_view(template_name = "Home/password_change.html"), name = "password_reset_confirm"),
     path("resetpasswordcomplete/",auth_views.PasswordResetCompleteView.as_view(template_name = "Home/password_complete.html") , name = "password_reset_complete"),
     path("search/", views.search, name="search"),
-    path("practice/", views.practice, name="practice"),
+    # path("practice/", views.practice, name="practice"),
     path("practice/python/", views.python, name="python"),
     path("practice/htmlcssjs/", views.html, name="html"),
     path('runcode', views.runcode, name="runcode"),
