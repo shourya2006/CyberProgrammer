@@ -35,6 +35,9 @@
             flex-direction: column !important;
             align-items: center !important;
         }
+        .m-bhi{
+            margin-top: 2rem;
+        }
     }
 
     @media only screen and (max-width: 1191px) {
@@ -48,6 +51,7 @@
             display: block !important;
         }
     }
+
 </style>
 
 {% endblock %}
@@ -73,7 +77,7 @@
         <h2 class="text-center">Recommended Videos</h2>
         <div class="row my-5 direction">
             {% for i in allvid %}
-            <div class="card col rounded mx-3" style="width: 18rem;">
+            <div class="card col rounded mx-3 m-bhi" style="width: 18rem;">
                 <img src="/media/{{i.image}}" class="card-img-top w-full" alt="img">
                 <div class="card-body">
                     <h5 class="card-title">{{i.video_name}}</h5>

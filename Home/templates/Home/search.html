@@ -1,12 +1,24 @@
 {% extends "Home/base.html" %}
 {% load static %}
 {% block title %}Cyber Programmer - Home {% endblock %}
-{% block css %}{% endblock %}
+
 {% block body %}
 {% if searched %}
 {% if heightvideos != 0 %}
-<h1>Search Results for {{searched}}...</h1>
-<div class="container">
+{% if heightvideos == 1 %}
+{% block css %} 
+<style>
+    .height{
+        height: 75vh !important;
+        display: flex;
+        /* justify-content: center !important;
+        align-items: center; */
+    }
+</style>
+{% endblock %}
+{% endif %}
+<h1 class="my-4">Search Results for {{searched}}...</h1>
+<div class="container height">
     <div class="row">
         {% for i in videos %}
         <div class="col-lg-4 mb-6 my-2">
