@@ -1,0 +1,90 @@
+{% extends "Home/base.html" %}
+{% load static %}
+{% block title %}Cyber Programmer - Error {% endblock %}
+{% block css %}
+<style>
+    @import url('http://fonts.cdnfonts.com/css/gilroy-bold?styles=20876,20879');
+    @import url('https://css.gg/arrow-bottom-right-o.css');
+
+
+    body {
+        background-color: #191319;
+        height: 100vh;
+
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 2rem;
+        padding: 1rem 1rem;
+        flex-flow: row wrap;
+    }
+
+    h1 {
+        font-family: 'Gilroy';
+        font-weight: 700;
+        color: #D1C1A7;
+        margin-right: 2rem;
+        flex-basis: 100%;
+        text-align: center;
+        padding: 1rem 1rem;
+        font-size: 3rem;
+    }
+
+    .all-buttons,
+    .all-buttons-v2 {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    .button2 {
+        font-family: 'Gilroy';
+        font-weight: 500;
+        font-size: 18px;
+        color: #D1C1A7;
+        background-color: inherit;
+        border: 1px solid #D1C1A7;
+        border-radius: 50px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+        transition: all 0.4s;
+        outline: none;
+    }
+
+    .gg-arrow-bottom-right-o {
+        transform: rotate(270deg);
+    }
+
+    .button2:hover {
+        padding: 0.8rem 1.4rem;
+        /*   transform: scale(1.1); */
+    }
+    a{
+        text-decoration: none;
+    }
+
+    footer {
+        bottom: 0;
+    }
+</style>
+{% endblock %}
+{% block body %}
+<section class="all-buttons">
+    <h1>Choose what to code with...</h1>
+    <a href="/practice/htmlcssjs"><button class="button2">
+            Html,Css and Js
+            <i class="gg-arrow-bottom-right-o icon"></i>
+        </button></a>
+    <a href="/practice/python"><button class="button2">
+        Python
+        <i class="gg-arrow-bottom-right-o icon"></i>
+    </button></a>
+</section>
+{% endblock %}
