@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from email.policy import default
 from pathlib import Path
 import os
 from .info import *
@@ -31,9 +30,9 @@ EMAIL_PORT = EMAIL_PORT
 SECRET_KEY = "django-insecure-)ag7ps!4=*mi1(m=ck%15z9n(edq0kcpci@$z&0545y98f7p@a"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1' , 'cyberprogrammer.herokuapp.com']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -92,9 +91,7 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age = 600)
-DATABASES['default'].update(db_from_env)
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

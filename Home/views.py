@@ -22,8 +22,7 @@ try:
     from .tokens import generate_token
 
 
-    def index(request):
-
+    def indexx(request):
         # user = request.user.get_full_name() #Full name of the user
         allvideos = Video.objects.all()
         allvid = allvideos[:3]
