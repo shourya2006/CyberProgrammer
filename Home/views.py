@@ -278,7 +278,7 @@ try:
 
     def html(request):
         return render(request , 'Home/htmlcssjs.html')
-    def error_404(request , exception):
-        return render(request,'Home/404error.html' )
+    def error_404(request, exception):
+        return render(request, 'Home/404error.html', status=404)
 except:
     HttpResponse('Something Gone wrong')
